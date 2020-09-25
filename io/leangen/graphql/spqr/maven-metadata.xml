@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>io.leangen.graphql</groupId>
+  <artifactId>spqr</artifactId>
+  <versioning>
+    <versions>
+      <version>0.10.2-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200925034349</lastUpdated>
+  </versioning>
+</metadata>

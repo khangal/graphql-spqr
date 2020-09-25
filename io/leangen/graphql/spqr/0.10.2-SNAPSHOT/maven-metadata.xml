@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>io.leangen.graphql</groupId>
+  <artifactId>spqr</artifactId>
+  <version>0.10.2-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20200925.034349</timestamp>
+      <buildNumber>7</buildNumber>
+    </snapshot>
+    <lastUpdated>20200925034349</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.10.2-20200925.034349-7</value>
+        <updated>20200925034349</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.10.2-20200925.034349-7</value>
+        <updated>20200925034349</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
