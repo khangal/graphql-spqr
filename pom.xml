@@ -4,7 +4,7 @@
     <groupId>io.leangen.graphql</groupId>
     <artifactId>spqr</artifactId>
     <packaging>jar</packaging>
-    <version>0.10.2-SNAPSHOT</version>
+    <version>0.10.4-SNAPSHOT</version>
 
     <inceptionYear>2016</inceptionYear>
     <name>GraphQL SPQR</name>
@@ -26,8 +26,9 @@
     </scm>
     <distributionManagement>
         <repository>
-            <id>bintray-leangen</id>
-            <url>https://api.bintray.com/maven/leangen/maven/spqr/</url>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/khangal/graphql-spqr</url>
         </repository>
     </distributionManagement>
     <issueManagement>
@@ -40,10 +41,6 @@
     </properties>
 
     <repositories>
-        <repository>
-            <id>GraphQL-SPQR-repo</id>
-            <url>http://dl.bintray.com/leangen/maven</url>
-        </repository>
         <repository>
             <id>andimarek-graphql-repo</id>
             <url>http://dl.bintray.com/andimarek/graphql-java</url>
@@ -98,7 +95,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java</artifactId>
-            <version>14.0</version>
+            <version>15.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.classgraph</groupId>
@@ -184,7 +181,7 @@
                 <configuration>
                     <goals>deploy</goals>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
+                    <releaseProfiles>github</releaseProfiles>
                     <pushChanges>false</pushChanges>
                     <tagNameFormat>graphql-spqr-v@{project.version}</tagNameFormat>
                 </configuration>
@@ -194,7 +191,21 @@
 
     <profiles>
         <profile>
-            <id>release</id>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/OWNER/*</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
             <build>
                 <plugins>
                     <plugin>
